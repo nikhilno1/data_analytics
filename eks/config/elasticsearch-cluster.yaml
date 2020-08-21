@@ -10,28 +10,28 @@ managedNodeGroups:
     labels: { role: master }
     instanceType: c5.large
     desiredCapacity: 3
-	volumeSize: 20
-	ssh:
+    volumeSize: 20
+    ssh:
       publicKeyPath: ~/.ssh/AWS-EKS-Public-key.pub
-	tags:
+    tags:
       nodegroup-role: master
 
   - name: data-nodes
     labels: { role: data }
     instanceType: i3.xlarge
     desiredCapacity: 2
-	volumeSize: 40
-	ssh:
+    volumeSize: 40
+    ssh:
       publicKeyPath: ~/.ssh/AWS-EKS-Public-key.pub
-	tags:
+    tags:
       nodegroup-role: data
 	 
   - name: client-nodes
     labels: { role: client }
     instanceType: i3.xlarge
     desiredCapacity: 1
-	volumeSize: 40
-	ssh:
+    volumeSize: 40
+    ssh:
       publicKeyPath: ~/.ssh/AWS-EKS-Public-key.pub
-	tags:
+    tags:
       nodegroup-role: client 
