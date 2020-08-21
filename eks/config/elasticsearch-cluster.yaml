@@ -25,7 +25,7 @@ managedNodeGroups:
       publicKeyPath: ~/.ssh/AWS-EKS-Public-key.pub
     tags:
       nodegroup-role: data
-	 
+
   - name: client-nodes
     labels: { role: client }
     instanceType: i3.xlarge
